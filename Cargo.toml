@@ -1,0 +1,15 @@
+[package]
+name = "h3o-ffi-wrapper"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+h3o = "0.7.1"
+napi = "3.0.0-alpha.24"
+napi-derive = "3.0.0-alpha.22"
+
+[build-dependencies]
+napi-build = "2.1.4"

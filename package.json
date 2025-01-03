@@ -1,0 +1,49 @@
+{
+  "name": "h3o-js",
+  "version": "0.0.1",
+  "description": "Javascript version of H3o library",
+  "license": "MIT",
+  "type": "commonjs",
+  "types": "index.d.ts",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "bench": "node --import @swc-node/register/esm-register benchmark/bench.ts"
+  },
+  "repository": "git@github.com:wjdqhry/h3o-js.git",
+  "napi":{
+    "binaryName": "h3o-ffi-wrapper",
+    "targets": [
+      "x86_64-apple-darwin",
+      "aarch64-apple-darwin",
+      "x86_64-unknown-linux-gnu",
+      "x86_64-pc-windows-msvc",
+      "x86_64-unknown-linux-musl",
+      "aarch64-unknown-linux-gnu",
+      "i686-pc-windows-msvc",
+      "armv7-unknown-linux-gnueabihf",
+      "aarch64-linux-android",
+      "x86_64-unknown-freebsd",
+      "aarch64-unknown-linux-musl",
+      "aarch64-pc-windows-msvc",
+      "armv7-linux-androideabi"
+    ]
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "dependencies": {
+    "ffi-rs": "^1.2.1"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.4",
+    "@swc-node/register": "^1.10.9",
+    "@swc/core": "^1.10.4",
+    "tinybench": "^3.1.0",
+    "typescript": "^5.7.2",
+    "h3-js": "^4.1.0"
+  }
+}

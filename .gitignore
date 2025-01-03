@@ -1,0 +1,14 @@
+.idea
+
+debug/
+target/
+
+Cargo.lock
+.DS_Store
+
+.env
+
+*.node
+*.wasm
+
+node_modules/
