@@ -18,6 +18,19 @@ pub fn cellToLatLng(cell: String) -> Option<Vec<f64>> {
     })
 }
 
+#[napi]
+pub fn cellToBoundary(cell: String, geojson: bool) -> Option<Vec<Vec<f64>>> {
+    CellIndex::from_str(&cell).ok().map(|cell_index| {
+        cell_index.boundary().iter().map(|ll|
+            return if geojson {
+                vec![ll.lng(), ll.lat()]
+            } else {
+                vec![ll.lat(), ll.lng()]
+            }
+        ).collect()
+    })
+}
+
 #[napi(object)]
 pub struct LatLng {
     pub lat: f64,

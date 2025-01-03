@@ -5,6 +5,7 @@
 
 function latLngToCell(lat: number, lng: number, resolution: number): string
 function cellToLatLng(cell: string): Array<number> | null
+function cellToBoundary(cell: string, geojson: boolean): Array<Array<number>> | null
 export interface LatLng {
   lat: number
   lng: number

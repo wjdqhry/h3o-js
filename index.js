@@ -310,7 +310,8 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { latLngToCell, cellToLatLng } = nativeBinding
+const { latLngToCell, cellToLatLng, cellToBoundary } = nativeBinding
 
 module.exports.latLngToCell = latLngToCell
 module.exports.cellToLatLng = cellToLatLng
+module.exports.cellToBoundary = cellToBoundary
