@@ -4,7 +4,7 @@
 
 `h3o-js` is a JavaScript/TypeScript library that wraps the [H3o](https://github.com/HydroniumLabs/h3o).
 
-H3o is a Rust implementation of the [H3](https://h3geo.org) geospatial indexing system.
+H3o is a Rust implementation of the [H3](https://github.com/uber/h3) geospatial indexing system.
 
 # Benchmarks
 
